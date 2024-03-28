@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalhu</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="icon" href="assets/Logo Kalhu.png">
+</head>
+<body>
+    <!-- Awal Header -->
+    <header>
+        <nav>
+            <p>Kalhu</p>
+            <ul>
+                <li><a href="#beranda" class="aktif">Beranda</a></li>
+                <li><a href="#jenis">Jenis</a></li>
+                <li><a href="#kalkulator">Kalkulator</a></li>
+                <li><a href="#hubungi">Hubungi</a></li>
+                <li><a href="#tentang">Tentang</a></li>
+            </ul>
+            <div class="toggle">
+                <input type="checkbox">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+    <!-- Akhir Header -->
+
+    <!-- Awal Main -->
+    <main id="content">
+        <!-- Awal Article -->
+        <article>
+            <section id="beranda">
+                <img src="assets/Logo Kalhu.png" alt="Logo Kalhu" width="200px">
+                <div>
+                    <p>Kesulitan untuk mengoversi suhu?</p>
+                    <p><span id="text-title">Kalkulator Suhu</span> adalah jawaban untuk masalah Anda </p>
+                    <div><a href="#kalkulator">Coba Sekarang</a></div>
+                </div>
+            </section>
+            <section id="jenis">
+                <h2>Jenis Suhu</h2>
+                <div class="card">
+                    <div class="satuan">Celcius</div>
+                    <div class="desk">Skala Celsius adalah suatu skala suhu yang didesain supaya titik beku air berada pada 0 derajat dan titik didih pada 100 derajat di tekanan atmosferik standar. Skala ini mendapat namanya dari ahli astronomi Anders Celsius (1701–1744), yang pertama kali mengusulkannya pada tahun 1742.</div>
+                </div>
+                <div class="card">
+                    <div class="satuan">Reamur</div>
+                    <div class="desk">Skala Réaumur adalah skala temperatur yang dinamai menurut René Antoine Ferchault de Réaumur, yang pertama mengusulkannya pada 1731. Titik beku air adalah 0 derajat Réaumur, titik didih air 80 derajat.</div>
+                </div>
+                <div class="card">
+                    <div class="satuan">Fahrenheit</div>
+                    <div class="desk">Skala Fahrenheit adalah salah satu skala suhu selain Celsius dan Kelvin. Nama Fahrenheit diambil dari ilmuwan Jerman yang bernama Gabriel Fahrenheit (1686-1736). Skala ini dikemukakan pada tahun 1724.</div>
+                </div>
+                <div class="card">
+                    <div class="satuan">Kelvin</div>
+                    <div class="desk">Skala Kelvin ditemukan oleh William Thomson sendiri. Kelvin adalah skala suhu termodinamika mutlak, yang berarti menggunakan nol mutlak (ketika gerakan molekuler berhenti, dalam bidang termodinamika) sebagai titik 0 K.</div>
+                </div>
+            </section>
+            <section id="kalkulator">
+                <h2>Kalkulator</h2>
+                <form class="form box">
+                    <div id="input-area">
+                        <label>Masukkan jenis bilangan </label>
+                        <select id="select">
+                            <option value="Celcius" selected="selected">Celcius</option>
+                            <option value="Reamur">Reamur</option>
+                            <option value="Fahrenheit">Fahrenheit</option>
+                            <option value="Kelvin">Kelvin</option>
+                        </select>
+                        <label>Masukkan suhu</label>
+                        <input id="input" type="text" placeholder="123 atau 1234,56">
+                        <p id="warning"></p>
+                    </div>
+                    <button class="button blur" id="button-kalkulator" disabled>Hitung</button>
+                    <br>
+                    <div id="value-area">
+                        <label>Reamur</label>
+                        <p>...</p>
+                        <div>
+                            <button class="copy" disabled>Salin</button>                        
+                            <span class="copy-popup"></span>
+                        </div>
+                        <label>Fahrenheit</label>
+                        <p>...</p>
+                        <div>
+                            <button class="copy" disabled>Salin</button>                        
+                            <span class="copy-popup"></span>
+                        </div>
+                        <label>Kelvin</label>
+                        <p>...</p>
+                        <div>
+                            <button class="copy" disabled>Salin</button>                        
+                            <span class="copy-popup"></span>
+                        </div>                     
+                    </div>
+                </form>
+            </section>
+            <section id="hubungi">
+                <h2>Hubungi</h2>
+                <form name="form" class="form box">
+                    <label for="nama">Nama</label>
+                    <input name ="nama" value="" type="text" placeholder="Masukkan nama lengkap Anda" required>
+                    <label for="email">Email</label>
+                    <input name ="email" value="" type="text" placeholder="Masukkan e-mail (abc@gmail.com)" required>
+                    <label for="nomor">Nomor HP</label>
+                    <input name ="nomor" value="" type="text" placeholder="Masukkan nomor telepon (+6212345678)" required>
+                    <label for="pesan">Pesan</label>
+                    <textarea name ="pesan" value="" type="text" rows="10" required></textarea>
+                    <button class="button" id="button-hubungi">Kirim</button>
+                </form>
+            </section>
+        </article>
+        <!-- Akhir Article -->
+
+        <!-- Awal Aside -->
+        <aside id="tentang">
+            <h2>Tentang</h2>
+            <div id="card-profile">
+                <img src="assets/Profil.jpg" alt="profil">
+                <p>Kevin Winardi</p>
+                <p>Seseorang yang berdedikasi tinggi untuk belajar.</p>
+            </div>
+        </aside>
+        <!-- Akhir Aside -->
+    </main>
+    <!-- Akhir Main -->
+
+    <!-- Awal Footer -->
+    <footer>
+        <p>&copy2024 Kalhu | All Rights Reserved</p>
+        <p>By Kevin Winardi</p>
+    </footer>
+    <!-- Akhir Footer -->
+    <script src="script/script.js"></script>
+</body>
+</html>

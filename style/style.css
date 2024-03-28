@@ -1,0 +1,370 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+
+nav {
+    width: 100%;
+    padding: 5px 20px;
+    display: flex;
+    position: fixed;
+    justify-content: space-between;
+    background-color: white;
+    z-index: 1001;
+}
+
+.toggle{
+    display: none;
+    flex-direction: column;
+    height: 20px;
+    justify-content: space-between;
+    position: relative;
+}
+
+.toggle input{
+    position: absolute;
+    width: 38px;
+    height: 30px;
+    left: -6px;
+    top: -5px;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 3;
+}
+
+.toggle span{
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: black;
+    border-radius: 3px;
+    transition: .5s;
+}
+
+.toggle span:nth-child(2){
+    transform-origin: 0 0;
+}
+
+.toggle span:nth-child(4){
+    transform-origin: 0 100%;
+}
+
+.toggle input:checked ~ span:nth-child(2){
+    transform: rotate(45deg) translate(-1px,-1px);
+}
+
+.toggle input:checked ~ span:nth-child(3){
+    opacity: 0;
+    transform: scale(0)
+}
+
+.toggle input:checked ~ span:nth-child(4){
+    transform: rotate(-45deg) translate(-1px,0);
+}
+
+nav p {
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+nav ul {
+    gap: 4rem;
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+nav ul li:hover{
+    transform: scale(1.1);
+    transition: .5s ease-in;
+}
+
+nav ul li a{
+    font-size: 2rem;
+    color: black;
+}
+
+nav ul li:nth-child(3){
+    padding: 10px;
+    border-radius: 25px;
+    color: white;
+    background-color: black;
+}
+
+nav ul li:nth-child(3) a{
+    color: white;
+}
+
+h2{
+    font-size: 5rem;
+    padding: 60px;
+    text-align: center;
+}
+
+/* Beranda */
+#beranda{
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#text-title{
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+#beranda img{
+    height: 100%;
+    margin: 1rem;
+}
+
+#beranda div p{
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+#beranda div a{
+    font-size: 1.5rem;
+    padding: 10px;
+    border-radius: 20px;
+    color: white;
+    background-color: rgb(68, 68, 68);
+}
+
+#beranda a:hover{
+    background-color: black;
+    transition: .5s;
+}
+
+/* Jenis */
+.card{
+    margin: 20px;
+}
+
+.satuan{
+    position: relative;
+    font-size: 3rem;
+    padding: 1rem;
+    width: min-content;
+    color: white;
+    background-color: black;
+}
+
+.desk{
+    font-size: 2rem;
+    padding: 5px;
+    border: 1px solid black;
+    text-align: justify;
+    color: black;
+    background-color: white;
+}
+
+/* Kalklulator */
+.box{
+    width: 50%;
+    border: 1px solid gray;
+    border-radius: 10px;
+    padding-inline: 10px;
+    padding-bottom: 10px;
+    backdrop-filter: blur(2px);
+    margin: 0 auto;
+    background-color: transparent;
+}
+
+.copy{
+    border-radius: 5px;
+    padding: 5px;
+    width: min-content;
+    background-color: lightgray;
+    cursor: pointer;
+}
+
+.copy:not([disabled]):hover{
+    color: white;
+    background-color: green;
+}
+
+.copy-popup{
+    border-radius: 5px;
+    opacity: 50%;
+    padding: 5px;
+    color: white;
+    cursor: default;
+    visibility: hidden;
+    background-color: #555;
+}
+
+.fade-in{
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn{
+    from{opacity: 0;}
+    to{opacity: 0.5;}
+}
+
+#input-area{
+    position: relative;
+}
+
+.form, #input-area, #value-area{
+    display: flex;
+    flex-direction: column;
+}
+
+.form p{
+    font-size: 1.5rem;
+}
+
+label{
+    font-size: 2rem;
+    margin-top: 20px;
+}
+
+input, select, option{
+    font-size: 1.5rem;
+    padding: 5px 2px;
+}
+
+select{
+    cursor: pointer;
+}
+
+#warning{
+    position: absolute;
+    top: 100%;
+    padding: 5px 2px;
+    color: red;
+}
+
+.button{
+    margin-top: 30px;
+    width: 100%;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    color: white;
+    background-color: black;
+    cursor: pointer;
+}
+
+#button:not([disabled]):hover{
+    transition: .5s;
+    background-color: green;
+}
+
+.blur {
+    opacity: 50%;
+}
+
+/* Hubungi */
+#form-hubungi{
+    margin: 0 auto;
+    width: min-content;
+    display: flex;
+    flex-direction: column;
+}
+textarea{
+    font-size: 1.5rem;
+    padding: 5px;
+    resize: none;
+}
+
+/* Tentang */
+#card-profile{
+    border: 1px solid black;
+    padding: 20px;
+    margin: 0 auto 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: min-content;
+}
+
+#card-profile:hover{
+    transform: scale(1.1);
+    transition: .5s ease-in-out;
+}
+
+#card-profile img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+#card-profile p{
+    font-size: 2rem;
+    margin: 5px;
+}
+
+#card-profile p:nth-of-type(1){
+    font-weight: bold;
+}
+
+/* Footer */
+footer{
+    padding: 10px;
+    margin: auto;
+    color: white;
+    text-align: center;
+    background-color: black;
+}
+
+footer p{
+    font-size: 1.5rem;
+}
+@media (max-width:640px) {
+    *{
+        font-size: 6px;
+    }
+    .toggle{
+        display: flex;
+    }
+    nav ul{
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 50%;
+        height: 100vh;
+        align-items: center;
+        justify-content: space-evenly;
+        display: flex;
+        flex-direction: column;
+        background: white;
+        border: 1px solid gray;
+        border-radius: 13px;
+        z-index: -1;
+        transform: translateX(100%);
+        transition: all 1s;
+        opacity: 0;
+    }
+    nav ul.slide{
+        transform: translateX(0);
+        opacity: 1;
+    }
+    #beranda{
+        flex-direction: column;
+        align-items: center;
+    }
+    #beranda img{
+        width: 70%;
+    }
+    .form{
+        width: 80%;
+    }
+}
+
+@media (min-width:641px) and (max-width:1008px){
+    *{
+        font-size: 8px;
+    }
+    .form{
+        width: 70%;
+    }
+}
